@@ -20,9 +20,6 @@ t = 0
 #CALCULATION LOOP: ALL REPEATED CALCULATIONS GO HERE
 while t < 10*365*24*60*60:
     rate(100)
-    force = G * mEarth * mcraft / mag(craft.pos)**2
-    Force = (force*(craft.pos-Earth.pos)/mag(craft.pos))
-    pcraft = pcraft + Force*deltat
     craft.pos = craft.pos + (pcraft/mcraft)*deltat
     trail.append(pos=craft.pos)
     t = t + deltat
